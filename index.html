@@ -5,11 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de Humor</title>
     <link rel="shortcut icon" href="emojifavicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
 </head>
 <body>
-    
-    
+    <h3 class="btn btn-warning heading"> 
+    Teste de Humor
+    <br>
+        <span>😊</span>
+        <span>😀</span>
+        <span>😔</span>
+        <span>😢</span>
+        <span>😡</span>
+        <span>😤</span>
+    </h3>
+    <br>
+    <br>
+    <p style="font-size: 22px;">Tire sua selfie para testar seu humor e gerar seu emoji
+    <br>
+    <strong style="color: gold;">Você está Feliz?</strong>
+    <br>
+    <strong style="color: blue;">Você está Triste?</strong>
+    <br>
+    <strong style="color: red;">Você está Irritado(a)?</strong>
+    </p>
+    <div class="container">
+        <div>
+            <label>Visualização da Webcam</label>
+            <div id="camera"></div>
+            <br>
+            <br>
+            <button onclick="takeSnapshot()" class="btn btn-primary">Capturar Imagem</button>
+        </div>
+
+        <div>
+            <label>Previsão 1: </label>
+            <p class="emotionalName" id="resultEmotionName"></p>
+            <p class="emoji" id="updateEmoji"></p>
+            
+            <label>Previsão 2: </label>
+            <p class="emotionalName" id="resultEmotionName2"></p>
+            <p class="emoji" id="updateEmoji2"></p>
+        </div>
+
+        <div>
+            <label>Foto: </label>
+            <div id="result"></div>
+            <br>
+            <br>
+            <button onclick="check();" class="btn btn-success">Prever Emoção</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
