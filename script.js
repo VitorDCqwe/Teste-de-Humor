@@ -12,9 +12,9 @@ Webcan.set ({
 Webcan.attach('#camera');
 
 function takeSnapshot() {
-    Webcan.snap(function (datauri)) {
+    Webcan.snap(function (datauri) {
         document.getElementById("result").innerHTML = `<img id="captureImage" src="${datauri}">`;
-    }
+    });
 }
 
 console.log('ml5 version:', ml5.version);
