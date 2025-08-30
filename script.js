@@ -25,3 +25,9 @@ ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/KtMLgmqog/mo
         console.log('Model Load!');
     })
     .catch(err => console.error('Erro ao carregar o modelo:', err));
+
+function speak() {
+    let synth = window.speechSynthesis
+    let speakData1 = "A primeira previsão é " + prediction1;
+    let speakData2 = "E a segunda previsão é " + prediction2;
+}
