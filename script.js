@@ -19,3 +19,9 @@ function takeSnapshot() {
 
 console.log('ml5 version:', ml5.version);
 
+ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/KtMLgmqog/model.json')
+    .then(model => {
+        classifier = model;
+        console.log('Model Load!');
+    })
+    .catch(err => console.error('Erro ao carregar o modelo:', err));
